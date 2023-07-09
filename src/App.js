@@ -1,12 +1,11 @@
-import './App.css';
-
+// pages
 import MainPage from './pages/MainPage';
 import PosterPage from './pages/PosterPage';
 import ContentPage from './pages/ContentPage';
-// import SavePage from './pages/SavePage';
+import SavePage from './pages/SavePage';
 
-import ImageExporter from './components/ImageExporter';
-
+// css
+import './App.css';
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <MainPage/>
         <PosterPage/>
         <ContentPage/>
-        <ImageExporter/>
+        <SavePage/>
       </div>
   );
 }
