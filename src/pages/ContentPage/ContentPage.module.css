@@ -1,5 +1,5 @@
-.main-background {
-  background-image: url('../assets/images/background1.png');
+.content-background {
+  background-image: url('./contentpage-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

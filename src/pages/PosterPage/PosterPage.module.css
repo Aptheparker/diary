@@ -1,5 +1,5 @@
-.content-background {
-  background-image: url('../assets/images/background3.png');
+.poster-background {
+  background-image: url('./posterpage-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
