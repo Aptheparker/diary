@@ -29,37 +29,16 @@ const PosterPage = () => {
     ]);
   };
 
-  const handleExportCanvas = () => {
-    // Create a temporary canvas element
-    const tempCanvas = document.createElement("canvas");
-    tempCanvas.width = window.innerWidth;
-    tempCanvas.height = window.innerHeight;
-    const tempContext = tempCanvas.getContext("2d");
-
-    // Draw the stage onto the temporary canvas
-    tempContext.drawImage(stageRef.current.getStage().toCanvas(), 0, 0);
-
-    // Create a temporary link element to download the PNG file
-    const link = document.createElement("a");
-    link.href = tempCanvas.toDataURL();
-    link.download = "canvas.png";
-    link.click();
-  };
-
   return (
     <div className={classes["poster-background"]}>
       <Sticker src={sticker1} onDragStart={handleDragStart} />
       <Sticker src={sticker2} onDragStart={handleDragStart} />
       <Sticker src={sticker3} onDragStart={handleDragStart} />
-      <div
-        className={classes["canvas-container"]}
-        onDrop={handleDrop}
-        onDragOver={(e) => e.preventDefault()}
-      >
+      <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
         <Stage
-          width={window.innerWidth}
-          height={window.innerHeight}
-          style={{ border: "1px solid grey" }}
+          width={300}
+          height={300}
+          style={{ border: "1px solid grey", width: "300px", height: "300px"}}
           ref={stageRef}
         >
           <Layer>
@@ -73,9 +52,6 @@ const PosterPage = () => {
             ))}
           </Layer>
         </Stage>
-        <button className={classes["export-button"]} onClick={handleExportCanvas}>
-          Export Canvas
-        </button>
       </div>
     </div>
   );
