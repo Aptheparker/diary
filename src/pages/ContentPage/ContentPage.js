@@ -12,7 +12,7 @@ const ContentPage = ({contentImageRef}) => {
 
   return (
     <div className={classes["content-background"]}>
-      <div className={classes["content-image"]} ref={contentImageRef} >
+      <div className={classes["content-container"]} ref={contentImageRef} >
         <textarea
           className={classes["textbox1"]}
           placeholder="내용을 입력해주세요"

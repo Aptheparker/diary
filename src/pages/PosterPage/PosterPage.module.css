@@ -5,5 +5,20 @@
   background-position: center;
   height: 100vh;
   margin-top: 300px;
-  display: block; /* Set images as block elements to remove any remaining gaps */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stage-container {
+  background-image: url("./poster.png");
+  background-size: cover;
+  width: 430px;
+  height: 550px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
 }

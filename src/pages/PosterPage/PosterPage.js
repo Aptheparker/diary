@@ -92,13 +92,6 @@ const PosterPage = ({ posterImageRef }) => {
         top={1000}
         left={950}
         onDragStart={handleDragStart}
-        onDragEnd={(e) => {
-          this.setState({
-            isDragging: false,
-            x: e.target.x(),
-            y: e.target.y(),
-          });
-        }}
       />
       <Sticker
         src={sticker2}
@@ -346,19 +339,15 @@ const PosterPage = ({ posterImageRef }) => {
         left={800}
         onDragStart={handleDragStart}
       />
-
-      <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()} ref={posterImageRef}>
+      <div
+        onDrop={handleDrop}
+        onDragOver={(e) => e.preventDefault()}
+        ref={posterImageRef}
+        className={classes["stage-container"]}
+      >
         <Stage
           width={430}
           height={550}
-          style={{
-            width: "430px",
-            height: "550px",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            marginTop: "120px",
-            marginLeft: "370px",
-          }}
           ref={stageRef}
         >
           <Layer>
