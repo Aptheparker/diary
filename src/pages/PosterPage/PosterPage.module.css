@@ -4,6 +4,6 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  margin-top: 300px;
   display: block; /* Set images as block elements to remove any remaining gaps */
-  margin-bottom: 0;
 }

@@ -50,7 +50,7 @@ import sticker39 from "../../assets/images/39.png";
 import sticker40 from "../../assets/images/40.png";
 import sticker41 from "../../assets/images/41.png";
 
-const PosterPage = () => {
+const PosterPage = ({ posterImageRef }) => {
   const dragUrl = useRef();
   const stageRef = useRef();
   const [images, setImages] = useState([]);
@@ -347,7 +347,7 @@ const PosterPage = () => {
         onDragStart={handleDragStart}
       />
 
-      <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
+      <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()} ref={posterImageRef}>
         <Stage
           width={430}
           height={550}
