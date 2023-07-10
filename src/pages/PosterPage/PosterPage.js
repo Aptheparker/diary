@@ -222,7 +222,7 @@ const PosterPage = () => {
       />
       <Sticker
         src={sticker21}
-        top={1330}
+        top={1380}
         left={170}
         onDragStart={handleDragStart}
       />
@@ -264,14 +264,14 @@ const PosterPage = () => {
       />
       <Sticker
         src={sticker28}
-        top={1280}
-        left={80}
+        top={1300}
+        left={100}
         onDragStart={handleDragStart}
       />
       <Sticker
         src={sticker29}
-        top={1400}
-        left={130}
+        top={1410}
+        left={150}
         onDragStart={handleDragStart}
       />
       <Sticker
@@ -288,7 +288,7 @@ const PosterPage = () => {
       />
       <Sticker
         src={sticker32}
-        top={1300}
+        top={1340}
         left={270}
         onDragStart={handleDragStart}
       />
