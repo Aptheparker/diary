@@ -1,27 +1,28 @@
-import React, { useRef } from 'react';
-import html2canvas from 'html2canvas';
+import React, { useRef } from "react";
+import html2canvas from "html2canvas";
 
-import Background4 from '../assets/images/background4.png';
+import stick from "../../assets/images/15.png";
 
+import classes from "./SavePage.module.css";
 
 const ImageExporter = () => {
   const componentRef = useRef(null);
 
   const exportAsPng = () => {
     html2canvas(componentRef.current).then((canvas) => {
-      const dataUrl = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
+      const dataUrl = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
       link.href = dataUrl;
-      link.download = 'image.png';
+      link.download = "image.png";
       link.click();
     });
   };
 
   return (
-    <div>
+    <div className={classes["save-background"]}>
       {/* Your component with the <img> tag */}
       <div ref={componentRef}>
-        <img src={Background4} alt="Your Image" />
+        <img src={stick} alt="" />
       </div>
 
       {/* Button to trigger export */}

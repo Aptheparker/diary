@@ -1,5 +1,5 @@
-.poster-background {
-  background-image: url("./posterpage-background.png");
+.save-background {
+  background-image: url('./savepage-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,10 +7,4 @@
   height: 100vh;
   display: block; /* Set images as block elements to remove any remaining gaps */
   margin-bottom: 0;
-}
-
-.canvas-container {
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
 }
