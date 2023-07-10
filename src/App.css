@@ -5,10 +5,3 @@
   height: auto;
 }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block; /* Set images as block elements to remove any remaining gaps */
-  margin-bottom: 0;
-}
-
