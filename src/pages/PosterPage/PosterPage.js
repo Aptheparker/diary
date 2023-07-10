@@ -89,8 +89,8 @@ const PosterPage = ({ posterImageRef }) => {
     <div className={classes["poster-background"]}>
       <Sticker
         src={sticker1}
-        top={160}
-        left={80}
+        top={1000}
+        left={950}
         onDragStart={handleDragStart}
       />
       <Sticker

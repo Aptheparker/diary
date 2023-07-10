@@ -30,8 +30,8 @@ const Sticker = ({ src, width, height, top, left, zIndex, onDragStart }) => {
       style={{
         width: `${width}px`,
         height: `${height}px`,
-        top: `${top}%`,
-        left: `${left}%`,
+        top: `${top}px`,
+        left: `${left}px`,
         zIndex: `${zIndex}`,
         position: "absolute",
       }}
