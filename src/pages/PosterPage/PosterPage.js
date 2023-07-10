@@ -4,7 +4,6 @@ import { Stage, Layer } from "react-konva";
 
 // components
 import { URLImage, Sticker } from "../../components/Sticker/Sticker";
-import background from "./poster.png";
 
 // stickers
 import classes from "./PosterPage.module.css";
@@ -346,8 +345,8 @@ const PosterPage = ({ posterImageRef }) => {
         className={classes["stage-container"]}
       >
         <Stage
-          width={430}
-          height={550}
+          width={window.innerWidth * 0.9} // Adjust the width as needed
+          height={window.innerHeight * 0.7} // Adjust the height as needed
           ref={stageRef}
         >
           <Layer>
