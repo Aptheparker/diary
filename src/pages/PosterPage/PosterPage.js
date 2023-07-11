@@ -1,5 +1,5 @@
 // hooks
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Stage, Layer } from "react-konva";
 
 // components
@@ -53,6 +53,22 @@ const PosterPage = ({ posterImageRef }) => {
   const dragUrl = useRef();
   const stageRef = useRef();
   const [images, setImages] = useState([]);
+  const [stageWidth, setStageWidth] = useState(0);
+  const [stageHeight, setStageHeight] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setStageWidth(window.innerWidth);
+      setStageHeight(window.innerHeight);
+    };
+
+    handleResize(); // Set initial dimensions
+    window.addEventListener("resize", handleResize); // Update dimensions on resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up the event listener
+    };
+  }, []);
 
   const handleDragStart = (e) => {
     dragUrl.current = e.target.src;
@@ -60,9 +76,7 @@ const PosterPage = ({ posterImageRef }) => {
 
   const handleDrop = (e) => {
     e.preventDefault();
-    // register event position
     stageRef.current.setPointersPositions(e);
-    // add image
     setImages((prevImages) => [
       ...prevImages,
       {
@@ -84,271 +98,69 @@ const PosterPage = ({ posterImageRef }) => {
     });
   };
 
+  // ...
+  const stickerProps = [
+    { src: sticker1, top: 1000, left: 950 },
+    { src: sticker2, top: 930, left: 820 },
+    { src: sticker3, top: 1080, left: 1000 },
+    { src: sticker4, top: 1150, left: 850, zIndex: 2 },
+    { src: sticker5, top: 1145, left: 950, zIndex: 3 },
+    { src: sticker6, top: 1080, left: 850 },
+    { src: sticker7, top: 1150, left: 870, zIndex: 3 },
+    { src: sticker8, top: 1200, left: 950, zIndex: 3 },
+    { src: sticker9, top: 1150, left: 820 },
+    { src: sticker10, top: 1240, left: 800, zIndex: 3 },
+    { src: sticker11, top: 1420, left: 1080 },
+    { src: sticker12, top: 1500, left: 1050 },
+    { src: sticker13, top: 1300, left: 940, zIndex: 1 },
+    { src: sticker14, top: 1460, left: 900 },
+    { src: sticker15, top: 1400, left: 860 },
+    { src: sticker16, top: 1450, left: 820 },
+    { src: sticker17, top: 1500, left: 820 },
+    { src: sticker18, top: 1560, left: 820 },
+    { src: sticker19, top: 1620, left: 820 },
+    { src: sticker20, top: 1600, left: 860 },
+    { src: sticker21, top: 1380, left: 170 },
+    { src: sticker22, top: 1350, left: -30 },
+    { src: sticker23, top: 1350, left: -10 },
+    { src: sticker24, top: 1590, left: 180 },
+    { src: sticker25, top: 1130, left: 20 },
+    { src: sticker26, top: 1040, left: 190 },
+    { src: sticker27, top: 940, left: 170 },
+    { src: sticker28, top: 1300, left: 100 },
+    { src: sticker29, top: 1410, left: 150 },
+    { src: sticker30, top: 1450, left: -10 },
+    { src: sticker31, top: 1620, left: 80 },
+    { src: sticker32, top: 1340, left: 270 },
+    { src: sticker33, top: 1020, left: 20 },
+    { src: sticker34, top: 1120, left: -10 },
+    { src: sticker35, top: 1260, left: 0 },
+    { src: sticker36, top: 1250, left: 220 },
+    { src: sticker37, top: 1320, left: 350 },
+    { src: sticker38, top: 1440, left: 130 },
+    { src: sticker39, top: 1080, left: 150 },
+    { src: sticker40, top: 1240, left: 290 },
+    { src: sticker41, top: 1420, left: 800 },
+  ];
+
   return (
     <div className={classes["poster-background"]}>
-      <Sticker
-        src={sticker1}
-        top={1000}
-        left={950}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker2}
-        top={930}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker3}
-        top={1080}
-        left={1000}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker4}
-        top={1150}
-        left={850}
-        zIndex={2}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker5}
-        top={1145}
-        left={950}
-        zIndex={3}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker6}
-        top={1080}
-        left={850}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker7}
-        top={1150}
-        left={870}
-        zIndex={3}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker8}
-        top={1200}
-        left={950}
-        zIndex={3}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker9}
-        top={1150}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker10}
-        top={1240}
-        left={800}
-        zIndex={3}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker11}
-        top={1420}
-        left={1080}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker12}
-        top={1500}
-        left={1050}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker13}
-        top={1300}
-        left={940}
-        zIndex={1}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker14}
-        top={1460}
-        left={900}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker15}
-        top={1400}
-        left={860}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker16}
-        top={1450}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker17}
-        top={1500}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker18}
-        top={1560}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker19}
-        top={1620}
-        left={820}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker20}
-        top={1600}
-        left={860}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker21}
-        top={1380}
-        left={170}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker22}
-        top={1350}
-        left={-30}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker23}
-        top={1350}
-        left={-10}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker24}
-        top={1590}
-        left={180}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker25}
-        top={1130}
-        left={20}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker26}
-        top={1040}
-        left={190}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker27}
-        top={940}
-        left={170}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker28}
-        top={1300}
-        left={100}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker29}
-        top={1410}
-        left={150}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        top={1450}
-        left={-10}
-        src={sticker30}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker31}
-        top={1620}
-        left={80}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker32}
-        top={1340}
-        left={270}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker33}
-        top={1020}
-        left={20}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker34}
-        top={1120}
-        left={-10}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker35}
-        top={1260}
-        left={0}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker36}
-        top={1250}
-        left={220}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker37}
-        top={1320}
-        left={350}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker38}
-        top={1440}
-        left={130}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker39}
-        top={1080}
-        left={150}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker40}
-        top={1240}
-        left={290}
-        onDragStart={handleDragStart}
-      />
-      <Sticker
-        src={sticker41}
-        top={1420}
-        left={800}
-        onDragStart={handleDragStart}
-      />
+      {stickerProps.map((props, index) => (
+        <Sticker
+          key={index}
+          src={props.src}
+          top={props.top}
+          left={props.left}
+          onDragStart={handleDragStart}
+        />
+      ))}
       <div
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
         ref={posterImageRef}
         className={classes["stage-container"]}
       >
-        <Stage
-          width={430} // Adjust the width as needed
-          height={550} // Adjust the height as needed
-          ref={stageRef}
-        >
+        <Stage width={stageWidth} height={stageHeight} ref={stageRef}>
           <Layer>
             {images.map((image, index) => (
               <URLImage
