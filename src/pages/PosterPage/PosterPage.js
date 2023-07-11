@@ -85,11 +85,11 @@ const PosterPage = ({ posterImageRef }) => {
   // ...
   const stickerProps = [
     { src: sticker1, top: 136, left: 84 },
-    { src: sticker2, top: 128, left: 75 },
+    { src: sticker2, top: 130, left: 75 },
     { src: sticker3, top: 148, left: 88 },
     { src: sticker4, top: 156, left: 78, zIndex: 2 },
-    { src: sticker5, top: 1145, left: 950, zIndex: 3 },
-    { src: sticker6, top: 1080, left: 850 },
+    { src: sticker5, top: 156, left: 80, zIndex: 3 },
+    { src: sticker6, top: 149, left: 71 },
     { src: sticker7, top: 1150, left: 870, zIndex: 3 },
     { src: sticker8, top: 1200, left: 950, zIndex: 3 },
     { src: sticker9, top: 1150, left: 820 },
