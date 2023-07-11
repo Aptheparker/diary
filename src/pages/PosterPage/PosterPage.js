@@ -345,8 +345,8 @@ const PosterPage = ({ posterImageRef }) => {
         className={classes["stage-container"]}
       >
         <Stage
-          width={window.innerWidth * 0.9} // Adjust the width as needed
-          height={window.innerHeight * 0.7} // Adjust the height as needed
+          width={430} // Adjust the width as needed
+          height={550} // Adjust the height as needed
           ref={stageRef}
         >
           <Layer>

@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
   height: 120vh;
   margin-top: 300px;
   display: flex;
@@ -16,9 +15,8 @@
   display: flex;
   flex-direction: row;
   height: 30px;
-  margin-top: 1%; /* Adjust the margin as needed */
-  margin-left: 60%; /* Adjust the margin as needed */
-  gap: 50%;
+  margin-left: 800px;
+  gap: 10px;
 }
 
 .container {

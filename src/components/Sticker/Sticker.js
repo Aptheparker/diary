@@ -20,7 +20,7 @@ const URLImage = ({ image, width, height }) => {
   );
 };
 
-const Sticker = ({ src, width, height, top, left, zIndex, onDragStart }) => {
+const Sticker = ({ src, top, left, zIndex, onDragStart }) => {
   return (
     <img
       alt="a"
@@ -28,8 +28,6 @@ const Sticker = ({ src, width, height, top, left, zIndex, onDragStart }) => {
       draggable="true"
       onDragStart={onDragStart}
       style={{
-        width: `${width}px`, // Adjust the scaling as needed
-        height: `${height}px`, // Adjust the scaling as needed
         top: `${top}px`, // Adjust the scaling as needed
         left: `${left}px`, // Adjust the scaling as needed
         zIndex: `${zIndex}`,

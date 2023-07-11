@@ -3,13 +3,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
   height: 120vh;
   margin-top: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 1176px;
+  height: 672px;
+  margin-top: 300px; */
 }
 
 .stage-container {
@@ -17,4 +19,6 @@
   background-size: cover;
   width: 430px;
   height: 550px;
+  /* margin-top: 120px;
+  margin-left: 370px; */
 }
