@@ -53,22 +53,6 @@ const PosterPage = ({ posterImageRef }) => {
   const dragUrl = useRef();
   const stageRef = useRef();
   const [images, setImages] = useState([]);
-  const [stageWidth, setStageWidth] = useState(0);
-  const [stageHeight, setStageHeight] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setStageWidth(window.innerWidth);
-      setStageHeight(window.innerHeight);
-    };
-
-    handleResize(); // Set initial dimensions
-    window.addEventListener("resize", handleResize); // Update dimensions on resize
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // Clean up the event listener
-    };
-  }, []);
 
   const handleDragStart = (e) => {
     dragUrl.current = e.target.src;
@@ -100,10 +84,10 @@ const PosterPage = ({ posterImageRef }) => {
 
   // ...
   const stickerProps = [
-    { src: sticker1, top: 1000, left: 950 },
-    { src: sticker2, top: 930, left: 820 },
-    { src: sticker3, top: 1080, left: 1000 },
-    { src: sticker4, top: 1150, left: 850, zIndex: 2 },
+    { src: sticker1, top: 136, left: 84 },
+    { src: sticker2, top: 128, left: 75 },
+    { src: sticker3, top: 148, left: 88 },
+    { src: sticker4, top: 156, left: 78, zIndex: 2 },
     { src: sticker5, top: 1145, left: 950, zIndex: 3 },
     { src: sticker6, top: 1080, left: 850 },
     { src: sticker7, top: 1150, left: 870, zIndex: 3 },
@@ -160,7 +144,7 @@ const PosterPage = ({ posterImageRef }) => {
         ref={posterImageRef}
         className={classes["stage-container"]}
       >
-        <Stage width={stageWidth} height={stageHeight} ref={stageRef}>
+        <Stage width={560} height={720} ref={stageRef}>
           <Layer>
             {images.map((image, index) => (
               <URLImage

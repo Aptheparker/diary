@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  height: 130vh;
   margin-top: 200px;
   display: flex;
   flex-direction: column;
@@ -14,17 +14,17 @@
 .content-container {
   background-image: url('./content.png');
   background-size: cover;
-  width: 430px;
-  height: 550px;
+  width: 560px;
+  height: 720px;
   display: flex;
   flex-direction: column;
 }
 
 .textbox1 {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 220px;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 50px;
   background-color: transparent;
   border: none;
 }
@@ -36,16 +36,16 @@
 .row1 {
   display: flex;
   flex-direction: row;
-  width: 380px;
-  height: 160px;
-  margin-left: 30px;
+  width: 480px;
+  height: 210px;
+  margin-left: 50px;
   background-image: url('./textBox1/textbox1.png');
   padding: 5px;
 }
 
 .textbox2 {
-  width: 180px;
-  height: 150px;
+  width: 220px;
+  height: 200px;
   margin-left: 10px;
   background-color: transparent;
   border: none;
@@ -59,16 +59,17 @@
 .row2 {
   display: flex;
   flex-direction: row;
-  width: 380px;
-  height: 160px;
-  margin-left: 30px;
+  width: 480px;
+  height: 210px;
+  margin-top: 10px;
+  margin-left: 50px;
   background-image: url('./textBox2/textbox2.png');
   padding: 5px;
 }
 
 .textbox3 {
-  width: 180px;
-  height: 150px;
+  width: 220px;
+  height: 200px;
   margin-left: 10px;
   background-color: transparent;
   border: none;
@@ -83,7 +84,7 @@
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 364%;
+  top: 348%;
   left: 43%;
   /* top: 2300px;
   left: 500px; */
@@ -94,8 +95,8 @@
   width: 80px;
   height: 100px;
   position: absolute;
-  top: 364%;
-  left: 60%;
+  top: 348%;
+  left: 62%;
   /* top: 2300px;
   left: 710px; */
 }
@@ -104,7 +105,7 @@
   width: 80px;
   height: 70px;
   position: absolute;
-  top: 368%;
+  top: 352%;
   left: 48%;
   /* top: 2330px;
   left: 560px; */
@@ -115,8 +116,8 @@
   width: 150px;
   height: 120px;
   position: absolute;
-  top: 384%;
-  left: 57%;
+  top: 372%;
+  left: 59%;
   /* top: 2480px;
   left: 665px; */
 }
@@ -125,8 +126,8 @@
   width: 200px;
   height: 60px;
   position: absolute;
-  top: 393%;
-  left: 50%;
+  top: 380%;
+  left: 53%;
   /* top: 2540px;
   left: 590px; */
 }
