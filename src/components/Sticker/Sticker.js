@@ -28,10 +28,10 @@ const Sticker = ({ src, width, height, top, left, zIndex, onDragStart }) => {
       draggable="true"
       onDragStart={onDragStart}
       style={{
-        width: `${(width / 1176) * window.innerWidth}px`, // Adjust the scaling as needed
-        height: `${(height / 647.2) * window.innerHeight}px`, // Adjust the scaling as needed
-        top: `${(top / 647.2) * window.innerHeight}px`, // Adjust the scaling as needed
-        left: `${(left / 1176) * window.innerWidth}px`, // Adjust the scaling as needed
+        width: `${width}px`, // Adjust the scaling as needed
+        height: `${height}px`, // Adjust the scaling as needed
+        top: `${top}px`, // Adjust the scaling as needed
+        left: `${left}px`, // Adjust the scaling as needed
         zIndex: `${zIndex}`,
         position: "absolute",
       }}

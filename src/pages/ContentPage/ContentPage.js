@@ -8,34 +8,24 @@ import box1sticker3 from './textBox1/3.png';
 import box2sticker1 from './textBox2/1.png';
 import box2sticker2 from './textBox2/2.png';
 
-const ContentPage = ({contentImageRef}) => {
-
+const ContentPage = ({ contentImageRef }) => {
   return (
     <div className={classes["content-background"]}>
-      <div className={classes["content-container"]} ref={contentImageRef} >
-        <textarea
-          className={classes["textbox1"]}
-          placeholder="내용을 입력해주세요"
-        ></textarea>
+      <div className={classes["content-container"]} ref={contentImageRef}>
+        <textarea className={classes["textbox1"]} placeholder="내용을 입력해주세요"></textarea>
         <div className={classes["row1"]}>
-          <textarea
-            className={classes["textbox2"]}
-            placeholder="내용을 입력해주세요"
-          />
+          <textarea className={classes["textbox2"]} placeholder="내용을 입력해주세요" />
           <textarea className={classes["textbox2"]} />
         </div>
         <div className={classes["row2"]}>
-          <textarea
-            className={classes["textbox3"]}
-            placeholder="내용을 입력해주세요"
-          />
+          <textarea className={classes["textbox3"]} placeholder="내용을 입력해주세요" />
           <textarea className={classes["textbox3"]} />
         </div>
-        <img src={box1sticker1} alt="" className={classes["box1sticker1"]}/>
-        <img src={box1sticker2} alt="" className={classes["box1sticker2"]}/>
-        <img src={box1sticker3} alt="" className={classes["box1sticker3"]}/>
-        <img src={box2sticker1} alt="" className={classes["box2sticker1"]}/>
-        <img src={box2sticker2} alt="" className={classes["box2sticker2"]}/>
+        <img src={box1sticker1} alt="" className={classes["box1sticker1"]} />
+        <img src={box1sticker2} alt="" className={classes["box1sticker2"]} />
+        <img src={box1sticker3} alt="" className={classes["box1sticker3"]} />
+        <img src={box2sticker1} alt="" className={classes["box2sticker1"]} />
+        <img src={box2sticker2} alt="" className={classes["box2sticker2"]} />
       </div>
     </div>
   );
