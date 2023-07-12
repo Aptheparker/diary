@@ -39,7 +39,6 @@
   width: 480px;
   height: 210px;
   margin-left: 50px;
-  background-image: url('./textBox1/textbox1.png');
   padding: 5px;
 }
 
@@ -49,7 +48,6 @@
   margin-left: 10px;
   background-color: transparent;
   border: none;
-  color: white;
 }
 
 .textbox2::placeholder {
@@ -63,7 +61,6 @@
   height: 210px;
   margin-top: 10px;
   margin-left: 50px;
-  background-image: url('./textBox2/textbox2.png');
   padding: 5px;
 }
 
@@ -73,7 +70,6 @@
   margin-left: 10px;
   background-color: transparent;
   border: none;
-  color: rgb(234, 15, 212);
 }
 
 .textbox3::placeholder {
@@ -130,4 +126,32 @@
   left: 53%;
   /* top: 2540px;
   left: 590px; */
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (min-width: 1900px) {
+  .box1sticker1 {
+    top: 2300px;
+    left: 500px;
+  }
+
+  .box1sticker2 {
+    top: 2300px;
+    left: 710px;
+  }
+
+  .box1sticker3 {
+    top: 2330px;
+    left: 560px;
+  }
+
+  .box2sticker1 {
+    top: 2480px;
+    left: 665px;
+  }
+
+  .box2sticker2 {
+    top: 2540px;
+    left: 590px;
+  }
 }
