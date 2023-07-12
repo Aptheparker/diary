@@ -1,5 +1,5 @@
 // hooks
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Stage, Layer } from "react-konva";
 
 // components
@@ -82,49 +82,49 @@ const PosterPage = ({ posterImageRef }) => {
     });
   };
 
-  // ...
   const stickerProps = [
-    { src: sticker1, top: 136, left: 84 },
-    { src: sticker2, top: 130, left: 75 },
-    { src: sticker3, top: 148, left: 88 },
-    { src: sticker4, top: 156, left: 78, zIndex: 2 },
-    { src: sticker5, top: 156, left: 80, zIndex: 3 },
-    { src: sticker6, top: 149, left: 71 },
-    { src: sticker7, top: 1150, left: 870, zIndex: 3 },
-    { src: sticker8, top: 1200, left: 950, zIndex: 3 },
-    { src: sticker9, top: 1150, left: 820 },
-    { src: sticker10, top: 1240, left: 800, zIndex: 3 },
-    { src: sticker11, top: 1420, left: 1080 },
-    { src: sticker12, top: 1500, left: 1050 },
-    { src: sticker13, top: 1300, left: 940, zIndex: 1 },
-    { src: sticker14, top: 1460, left: 900 },
-    { src: sticker15, top: 1400, left: 860 },
-    { src: sticker16, top: 1450, left: 820 },
-    { src: sticker17, top: 1500, left: 820 },
-    { src: sticker18, top: 1560, left: 820 },
-    { src: sticker19, top: 1620, left: 820 },
-    { src: sticker20, top: 1600, left: 860 },
-    { src: sticker21, top: 1380, left: 170 },
-    { src: sticker22, top: 1350, left: -30 },
-    { src: sticker23, top: 1350, left: -10 },
-    { src: sticker24, top: 1590, left: 180 },
-    { src: sticker25, top: 1130, left: 20 },
-    { src: sticker26, top: 1040, left: 190 },
-    { src: sticker27, top: 940, left: 170 },
-    { src: sticker28, top: 1300, left: 100 },
-    { src: sticker29, top: 1410, left: 150 },
-    { src: sticker30, top: 1450, left: -10 },
-    { src: sticker31, top: 1620, left: 80 },
-    { src: sticker32, top: 1340, left: 270 },
-    { src: sticker33, top: 1020, left: 20 },
-    { src: sticker34, top: 1120, left: -10 },
-    { src: sticker35, top: 1260, left: 0 },
-    { src: sticker36, top: 1250, left: 220 },
-    { src: sticker37, top: 1320, left: 350 },
-    { src: sticker38, top: 1440, left: 130 },
-    { src: sticker39, top: 1080, left: 150 },
-    { src: sticker40, top: 1240, left: 290 },
-    { src: sticker41, top: 1420, left: 800 },
+    { src: sticker1, top: 146, left: 84 },
+    { src: sticker2, top: 140, left: 75 },
+    { src: sticker3, top: 158, left: 88 },
+    { src: sticker4, top: 166, left: 78, zIndex: 2 },
+    { src: sticker5, top: 166, left: 80, zIndex: 3 },
+    { src: sticker6, top: 159, left: 71 },
+    { src: sticker7, top: 169, left: 76, zIndex: 3 },
+    { src: sticker8, top: 172, left: 81, zIndex: 3 },
+    { src: sticker9, top: 169, left: 72 },
+    { src: sticker10, top: 179, left: 72, zIndex: 3 },
+    { src: sticker11, top: 199, left: 93 },
+    { src: sticker12, top: 212, left: 91 },
+    { src: sticker13, top: 187, left: 80, zIndex: 1 },
+    { src: sticker14, top: 206, left: 81 },
+    { src: sticker15, top: 197, left: 75 },
+    { src: sticker16, top: 199, left: 71 },
+    { src: sticker17, top: 210, left: 70 },
+    { src: sticker18, top: 220, left: 71 },
+    { src: sticker19, top: 228, left: 71 },
+    { src: sticker20, top: 225, left: 78 },
+    // left side
+    { src: sticker21, top: 188, left: 17 },
+    { src: sticker22, top: 192, left: 3, zIndex: 2 },
+    { src: sticker23, top: 202, left: 1, zIndex: 1 },
+    { src: sticker24, top: 223, left: 17 },
+    { src: sticker25, top: 163, left: 6, zIndex: 2 }, // two girls
+    { src: sticker26, top: 146, left: 19 },
+    { src: sticker27, top: 133, left: 17 },
+    { src: sticker28, top: 185, left: 6 },
+    { src: sticker29, top: 200, left: 14 },
+    { src: sticker30, top: 213, left: 2.5, zIndex: 3 }, // two diamonds
+    { src: sticker31, top: 227, left: 9 }, // "I OBJECT!"
+    { src: sticker32, top: 181, left: 22 }, 
+    { src: sticker33, top: 152, left: 4, zIndex: 1 }, // diamond heart
+    { src: sticker34, top: 164, left: 0 },
+    { src: sticker35, top: 178, left: 2 },
+    { src: sticker36, top: 176, left: 17 },
+    { src: sticker37, top: 182, left: 29 },
+    { src: sticker38, top: 186, left: 17 },
+    { src: sticker39, top: 162, left: 19 }, // heart "HAVARD"
+    { src: sticker40, top: 170, left: 23 },
+    { src: sticker41, top: 195, left: 71 },
   ];
 
   return (
@@ -135,6 +135,7 @@ const PosterPage = ({ posterImageRef }) => {
           src={props.src}
           top={props.top}
           left={props.left}
+          zIndex={props.zIndex}
           onDragStart={handleDragStart}
         />
       ))}
