@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "fontMedium";
+  src: url("../../fonts/fontMedium.otf") format("truetype");
+}
+
 .content-background {
   background-image: url('./content-background.png');
   background-repeat: no-repeat;
@@ -75,6 +80,13 @@
 
 .textbox3::placeholder {
   color: white;
+}
+
+.textbox1,
+.textbox2,
+.textbox3 {
+  font-size: 24px;
+  font-family: "fontMedium", sans-serif;
 }
 
 .box1sticker1 {

@@ -72,48 +72,47 @@ const PosterPage = ({ posterImageRef }) => {
 
   const stickerProps = [
     { src: sticker1, top: 31, left: 84 },
-{ src: sticker2, top: 25, left: 75 },
-{ src: sticker3, top: 43, left: 88 },
-{ src: sticker4, top: 51, left: 78, zIndex: 2 },
-{ src: sticker5, top: 51, left: 80, zIndex: 3 },
-{ src: sticker6, top: 44, left: 71 },
-{ src: sticker7, top: 54, left: 76, zIndex: 3 },
-{ src: sticker8, top: 57, left: 81, zIndex: 3 },
-{ src: sticker9, top: 54, left: 72 },
-{ src: sticker10, top: 64, left: 72, zIndex: 3 },
-{ src: sticker11, top: 84, left: 93 },
-{ src: sticker12, top: 97, left: 91 },
-{ src: sticker13, top: 72, left: 80, zIndex: 1 },
-{ src: sticker14, top: 91, left: 81 },
-{ src: sticker15, top: 82, left: 75 },
-{ src: sticker16, top: 84, left: 71 },
-{ src: sticker17, top: 95, left: 70 },
-{ src: sticker18, top: 105, left: 71 },
-{ src: sticker19, top: 113, left: 71 },
-{ src: sticker20, top: 110, left: 78 },
-// left side
-{ src: sticker21, top: 73, left: 17 },
-{ src: sticker22, top: 87, left: 7, zIndex: 2 },
-{ src: sticker23, top: 87, left: 1, zIndex: 1 },
-{ src: sticker24, top: 108, left: 17 },
-{ src: sticker25, top: 48, left: 6, zIndex: 2 }, // two girls
-{ src: sticker26, top: 31, left: 19 },
-{ src: sticker27, top: 18, left: 17 },
-{ src: sticker28, top: 70, left: 6 },
-{ src: sticker29, top: 85, left: 14 },
-{ src: sticker30, top: 98, left: 2.5, zIndex: 3 }, // two diamonds
-{ src: sticker31, top: 112, left: 9 }, // "I OBJECT!"
-{ src: sticker32, top: 66, left: 22 },
-{ src: sticker33, top: 37, left: 4, zIndex: 1 }, // diamond heart
-{ src: sticker34, top: 49, left: 0 },
-{ src: sticker35, top: 63, left: 2 },
-{ src: sticker36, top: 61, left: 17 },
-{ src: sticker37, top: 67, left: 29 },
-{ src: sticker38, top: 71, left: 17 },
-{ src: sticker39, top: 47, left: 19 }, // heart "HAVARD"
-{ src: sticker40, top: 55, left: 23 },
-{ src: sticker41, top: 80, left: 71 },
-
+    { src: sticker2, top: 25, left: 75 },
+    { src: sticker3, top: 43, left: 88 },
+    { src: sticker4, top: 51, left: 78, zIndex: 2 },
+    { src: sticker5, top: 51, left: 80, zIndex: 3 },
+    { src: sticker6, top: 44, left: 71 },
+    { src: sticker7, top: 54, left: 76, zIndex: 3 },
+    { src: sticker8, top: 57, left: 81, zIndex: 3 },
+    { src: sticker9, top: 54, left: 72 },
+    { src: sticker10, top: 64, left: 72, zIndex: 3 },
+    { src: sticker11, top: 84, left: 93 },
+    { src: sticker12, top: 97, left: 91 },
+    { src: sticker13, top: 72, left: 80, zIndex: 1 },
+    { src: sticker14, top: 91, left: 81 },
+    { src: sticker15, top: 82, left: 75 },
+    { src: sticker16, top: 84, left: 71 },
+    { src: sticker17, top: 95, left: 70 },
+    { src: sticker18, top: 105, left: 71 },
+    { src: sticker19, top: 113, left: 71 },
+    { src: sticker20, top: 110, left: 78 },
+    // left side
+    { src: sticker21, top: 73, left: 17 },
+    { src: sticker22, top: 87, left: 7, zIndex: 2 },
+    { src: sticker23, top: 87, left: 1, zIndex: 1 },
+    { src: sticker24, top: 108, left: 17 },
+    { src: sticker25, top: 48, left: 6, zIndex: 2 }, // two girls
+    { src: sticker26, top: 31, left: 19 },
+    { src: sticker27, top: 18, left: 17 },
+    { src: sticker28, top: 70, left: 6 },
+    { src: sticker29, top: 85, left: 14 },
+    { src: sticker30, top: 98, left: 2.5, zIndex: 3 }, // two diamonds
+    { src: sticker31, top: 112, left: 9 }, // "I OBJECT!"
+    { src: sticker32, top: 66, left: 22 },
+    { src: sticker33, top: 37, left: 4, zIndex: 1 }, // diamond heart
+    { src: sticker34, top: 49, left: 0 },
+    { src: sticker35, top: 63, left: 2 },
+    { src: sticker36, top: 61, left: 17 },
+    { src: sticker37, top: 67, left: 29 },
+    { src: sticker38, top: 71, left: 17 },
+    { src: sticker39, top: 47, left: 19 }, // heart "HAVARD"
+    { src: sticker40, top: 55, left: 23 },
+    { src: sticker41, top: 80, left: 71 },
   ];
 
   return (

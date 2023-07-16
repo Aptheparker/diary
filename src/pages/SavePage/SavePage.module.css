@@ -15,9 +15,10 @@
 .buttons {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 70px;
   height: 30px;
-  margin-left: 800px;
-  gap: 10px;
+  margin-left: 900px;
 }
 
 .container {
