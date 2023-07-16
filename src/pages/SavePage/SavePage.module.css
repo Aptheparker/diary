@@ -1,9 +1,10 @@
 .save-background {
-  background-image: url("./savepage-background.png");
+  background-image: url("./save-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  width: 100vw;
+  height: 100vh;
   margin-top: 200px;
   display: flex;
   flex-direction: column;

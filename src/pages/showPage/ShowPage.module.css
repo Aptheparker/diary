@@ -1,7 +1,9 @@
-.main-background {
-  background-image: url('./mainpage-background.png');
+.show-background {
+  background-image: url('./show-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100vw;
   height: 100vh;
+  margin-top: 200px;
 }
