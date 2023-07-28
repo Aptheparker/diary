@@ -22,8 +22,8 @@
 }
 
 .container {
-  width: 1200px;
-  height: 770px;
+  width: 1000px;
+  height: 640px;
   display: flex;
   flex-direction: row;
 }
