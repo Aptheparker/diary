@@ -22,8 +22,8 @@
 }
 
 .container {
-  width: 1000px;
-  height: 640px;
+  width: 1200px;
+  height: 770px;
   display: flex;
   flex-direction: row;
 }
@@ -31,7 +31,6 @@
 .poster {
   width: 50%;
   height: 100%;
-  overflow: hidden;
 }
 
 .poster img {
@@ -43,7 +42,6 @@
 .content {
   width: 50%;
   height: 100%;
-  overflow: hidden;
 }
 
 .content img {
