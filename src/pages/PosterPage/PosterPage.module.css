@@ -4,22 +4,19 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 130vh;
-  margin-top: 100px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 1176px;
-  height: 672px;
-  margin-top: 300px; */
 }
 
 .stage-container {
   background-image: url("./poster.png");
-  background-size: cover;
-  width: 560px;
-  height: 720px;
-  /* margin-top: 120px;
-  margin-left: 370px; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 40%;
+  height: 80%;
+  margin-top: 10% ;
 }
