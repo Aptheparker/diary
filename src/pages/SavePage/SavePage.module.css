@@ -19,11 +19,12 @@
   width: 70px;
   height: 30px;
   margin-left: 900px;
+  
 }
 
 .container {
   width: 1000px;
-  height: 650px;
+  height: 600px;
   display: flex;
   flex-direction: row;
 }

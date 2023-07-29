@@ -55,14 +55,14 @@ const PosterPage = ({ posterImageRef }) => {
   const [images, setImages] = useState([]);
   const [stageDimensions, setStageDimensions] = useState({
     width: 500,
-    height: 650,
+    height: 600,
   });
 
   const updateStageDimensions = () => {
     const isiMac = window.innerWidth >= 2200; // Adjust this value according to iMac viewport width
     setStageDimensions({
       width: isiMac ? 700 : 500,
-      height: isiMac ? 1000 : 650,
+      height: isiMac ? 1000 : 600,
     });
   };
 
