@@ -22,15 +22,14 @@
 }
 
 .container {
-  width: 1000px;
-  height: 640px;
+  width: 1060px;
+  height: 680px;
   display: flex;
-  flex-direction: row;
 }
 
 .poster {
-  width: 50%;
-  height: 100%;
+  width: 540px;
+  height: 680px;
 }
 
 .poster img {
@@ -40,8 +39,8 @@
 }
 
 .content {
-  width: 50%;
-  height: 100%;
+  width: 540px;
+  height: 680px;
 }
 
 .content img {
