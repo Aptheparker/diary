@@ -133,7 +133,7 @@ const PosterPage = ({ posterImageRef }) => {
         ref={posterImageRef}
         className={classes["stage-container"]}
       >
-        <Stage width={540} height={680} ref={stageRef}>
+        <Stage width={540} height={720} ref={stageRef}>
           <Layer>
             {images.map((image, index) => (
               <URLImage
