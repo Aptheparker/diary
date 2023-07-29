@@ -1,5 +1,5 @@
 // hooks
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Stage, Layer } from "react-konva";
 
 // components
@@ -53,6 +53,31 @@ const PosterPage = ({ posterImageRef }) => {
   const dragUrl = useRef();
   const stageRef = useRef();
   const [images, setImages] = useState([]);
+  const [stageDimensions, setStageDimensions] = useState({
+    width: 500,
+    height: 650,
+  });
+
+  const updateStageDimensions = () => {
+    const isiMac = window.innerWidth >= 2200; // Adjust this value according to iMac viewport width
+    setStageDimensions({
+      width: isiMac ? 700 : 500,
+      height: isiMac ? 1000 : 650,
+    });
+  };
+
+  useEffect(() => {
+    // Call the function on mount to set the initial stage dimensions
+    updateStageDimensions();
+
+    // Add event listener to update the stage dimensions on window resize
+    window.addEventListener("resize", updateStageDimensions);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateStageDimensions);
+    };
+  }, []);
 
   const handleDrag = (e) => {
     dragUrl.current = e.target.src;
@@ -113,7 +138,7 @@ const PosterPage = ({ posterImageRef }) => {
     { src: sticker39, top: 27, left: 19 }, // heart "HAVARD"
     { src: sticker40, top: 35, left: 23 },
     { src: sticker41, top: 60, left: 71 },
-];
+  ];
 
   return (
     <div className={classes["poster-background"]}>
@@ -133,7 +158,11 @@ const PosterPage = ({ posterImageRef }) => {
         ref={posterImageRef}
         className={classes["stage-container"]}
       >
-        <Stage width={540} height={720} ref={stageRef}>
+        <Stage
+          width={stageDimensions.width}
+          height={stageDimensions.height}
+          ref={stageRef}
+        >
           <Layer>
             {images.map((image, index) => (
               <URLImage

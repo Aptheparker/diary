@@ -4,13 +4,13 @@
 }
 
 .content-background {
-  background-image: url('./content-background.png');
+  background-image: url("./content-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
-  margin-top: 10%;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,13 +18,13 @@
 }
 
 .content-container {
-  background-image: url('./content.png');
+  background-image: url("./content.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 40%;
-  height: 80%;
-  margin-top: 10% ;
+  width: 500px;
+  height: 650px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -142,4 +142,11 @@
   left: 53%;
   /* top: 2540px;
   left: 590px; */
+}
+
+@media (min-width: 2200px) {
+  .content-container {
+    width: 750px;
+    height: 1000px;
+  }
 }
