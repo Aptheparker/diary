@@ -32,6 +32,7 @@ const Sticker = ({ src, top, left, zIndex, onDragStart }) => {
         left: `${left}%`,
         zIndex: zIndex,
         position: "absolute",
+        cursor: "pointer",
       }}
     />
   );
