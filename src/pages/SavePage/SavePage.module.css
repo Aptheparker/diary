@@ -22,8 +22,8 @@
 }
 
 .container {
-  width: 1010px;
-  height: 650px;
+  width: 1000px;
+  height: 645px;
   display: flex;
 }
 
@@ -41,7 +41,7 @@
 
 @media (min-width: 2200px) {
   .container {
-    width: 1520px;
-    height: 980px;
+    width: 1500px;
+    height: 1000px;
   }
 }

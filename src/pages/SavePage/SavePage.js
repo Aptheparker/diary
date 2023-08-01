@@ -3,8 +3,8 @@ import html2canvas from "html2canvas";
 import classes from "./SavePage.module.css";
 
 // button images
-import saveButton from "./saveButton.png"
-import printButton from "./printButton.png"
+import saveButton from "./saveButton.png";
+import printButton from "./printButton.png";
 
 const SavePage = ({ posterImageRef, contentImageRef }) => {
   const [posterSrc, setPosterSrc] = useState("");
@@ -72,7 +72,7 @@ const SavePage = ({ posterImageRef, contentImageRef }) => {
   return (
     <div className={classes["save-background"]}>
       <div className={classes["buttons"]}>
-      <img src={saveButton} alt="Save" onClick={saveAsFinal} />
+        <img src={saveButton} alt="Save" onClick={saveAsFinal} />
         <img src={printButton} alt="Export as PNG" onClick={exportAsPng} />
       </div>
       <div className={classes["container"]} ref={containerRef}>

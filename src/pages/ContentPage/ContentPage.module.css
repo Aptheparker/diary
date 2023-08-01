@@ -20,10 +20,10 @@
 .content-container {
   background-image: url("./content.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   width: 500px;
-  height: 600px;
+  height: 645px;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@
 
 @media (min-width: 2200px) {
   .content-container {
-    width: 750px;
+    width: 800px;
     height: 1000px;
   }
 

@@ -14,16 +14,16 @@
 .stage-container {
   background-image: url("./poster.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   width: 500px;
-  height: 600px;
+  height: 645px;
   margin-top: 100px;
 }
 
 @media (min-width: 2200px) {
   .stage-container {
-    width: 750px;
+    width: 800px;
     height: 1000px;
   }
 }
