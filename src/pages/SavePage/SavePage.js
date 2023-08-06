@@ -35,6 +35,7 @@ const SavePage = ({ posterImageRef, contentImageRef }) => {
     updateImages();
   }, [posterImageRef, contentImageRef]);
 
+
   const saveAsFinal = () => {
     if (posterImageRef.current) {
       html2canvas(posterImageRef.current)

@@ -8,12 +8,7 @@ const ContentPage = ({ contentImageRef }) => {
   const [message2_2, setMessage2_2] = useState("");
 
   const handleMessage1Change = (event) => {
-    if (event.nativeEvent.data === null) {
-      console.log("Enter");
-      setMessage1(event.target.value + "\n");
-    } else {
-      setMessage1(event.target.value);
-    }
+    setMessage1(event.target.value);
   };
 
   const handleMessage2_1Change = (event) => {
