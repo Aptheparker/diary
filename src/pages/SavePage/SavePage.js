@@ -48,7 +48,6 @@ const SavePage = ({ posterImageRef, contentImageRef }) => {
     }
 
     if (contentImageRef.current) {
-      console.log("contentImageRef.current:", contentImageRef.current);
       html2canvas(contentImageRef.current)
         .then((contentCanvas) => {
           setContentSrc(contentCanvas.toDataURL());
