@@ -1,5 +1,4 @@
-// css
-import { useState } from "react";
+import React, { useState } from "react";
 import classes from "./ContentPage.module.css";
 
 const ContentPage = ({ contentImageRef }) => {

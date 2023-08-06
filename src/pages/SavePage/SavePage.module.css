@@ -16,9 +16,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70px;
-  height: 30px;
-  margin-left: 900px;
+  width: 6%;
+  height: 4%;
+  align-self: flex-end;
+  margin-right: 20%;
+  gap: 20px;
+}
+
+.buttons img{
+  cursor: pointer;
 }
 
 .container {
