@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+// imports
+import { useState } from "react";
+
+
 import classes from "./ContentPage.module.css";
 
 const ContentPage = ({ contentImageRef }) => {
-  const [message1, setMessage1] = useState("");
-  const [message2_1, setMessage2_1] = useState("");
-  const [message2_2, setMessage2_2] = useState("");
+  const [placeholdersVisible, setPlaceholdersVisible] = useState({
+    textbox1: true,
+    textbox2: true,
+    textbox3: true,
+  });
 
-  const handleMessage1Change = (event) => {
-    setMessage1(event.target.value);
+  const handleFocus = (textbox) => {
+    setPlaceholdersVisible((prevPlaceholders) => ({
+      ...prevPlaceholders,
+      [textbox]: false,
+    }));
   };
 
-  const handleMessage2_1Change = (event) => {
-    setMessage2_1(event.target.value);
+  const handleBlur = (textbox, e) => {
+    if (!e.target.textContent) {
+      setPlaceholdersVisible((prevPlaceholders) => ({
+        ...prevPlaceholders,
+        [textbox]: true,
+      }));
+    }
   };
 
   return (
@@ -20,27 +33,38 @@ const ContentPage = ({ contentImageRef }) => {
         <div
           className={classes["textbox1"]}
           contentEditable
-          placeholder="내용을 입력해주세요"
-          value={message1}
-          onChange={handleMessage1Change}
-        />
+          onFocus={() => handleFocus("textbox1")}
+          onBlur={(e) => handleBlur("textbox1", e)}
+        >
+          {placeholdersVisible.textbox1 && (
+            <div>내용을 입력해주세요</div>
+          )}
+        </div>
         <div className={classes["row1"]}>
-          <div
-            className={classes["textbox2"]}
-            contentEditable
-            placeholder="내용을 입력해주세요"
-            value={message2_1}
-            onChange={handleMessage2_1Change}
-          />
-          <div className={classes["textbox2"]} />
+        <div
+          className={classes["textbox2"]}
+          contentEditable
+          onFocus={() => handleFocus("textbox2")}
+          onBlur={(e) => handleBlur("textbox2", e)}
+        >
+          {placeholdersVisible.textbox2 && (
+            <div>내용을 입력해주세요</div>
+          )}
+        </div>
+          <div className={classes["textbox2"]} contentEditable />
         </div>
         <div className={classes["row2"]}>
-          <div
-            contentEditable
-            className={classes["textbox3"]}
-            placeholder="내용을 입력해주세요"
-          />
-          <div className={classes["textbox3"]} />
+        <div
+          className={classes["textbox3"]}
+          contentEditable
+          onFocus={() => handleFocus("textbox3")}
+          onBlur={(e) => handleBlur("textbox3", e)}
+        >
+          {placeholdersVisible.textbox3 && (
+            <div>내용을 입력해주세요</div>
+          )}
+        </div>
+          <div className={classes["textbox3"]} contentEditable />
         </div>
       </div>
     </div>
