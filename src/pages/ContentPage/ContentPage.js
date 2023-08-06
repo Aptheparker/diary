@@ -17,27 +17,30 @@ const ContentPage = ({ contentImageRef }) => {
   return (
     <div className={classes["content-background"]}>
       <div className={classes["content-container"]} ref={contentImageRef}>
-        <textarea
+        <div
           className={classes["textbox1"]}
+          contentEditable
           placeholder="내용을 입력해주세요"
           value={message1}
           onChange={handleMessage1Change}
         />
         <div className={classes["row1"]}>
-          <textarea
+          <div
             className={classes["textbox2"]}
+            contentEditable
             placeholder="내용을 입력해주세요"
             value={message2_1}
             onChange={handleMessage2_1Change}
           />
-          <textarea className={classes["textbox2"]} />
+          <div className={classes["textbox2"]} />
         </div>
         <div className={classes["row2"]}>
-          <textarea
+          <div
+            contentEditable
             className={classes["textbox3"]}
             placeholder="내용을 입력해주세요"
           />
-          <textarea className={classes["textbox3"]} />
+          <div className={classes["textbox3"]} />
         </div>
       </div>
     </div>
