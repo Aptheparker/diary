@@ -86,6 +86,7 @@
 .textbox3 {
   font-size: 24px;
   font-family: "fontMedium", sans-serif;
+  white-space: pre-wrap;
 }
 
 .box1sticker1 {
@@ -94,8 +95,6 @@
   position: absolute;
   top: 348%;
   left: 43%;
-  /* top: 2300px;
-  left: 500px; */
   z-index: 1;
 }
 
@@ -105,8 +104,6 @@
   position: absolute;
   top: 349%;
   left: 62%;
-  /* top: 2300px;
-  left: 710px; */
 }
 
 .box1sticker3 {
@@ -115,8 +112,6 @@
   position: absolute;
   top: 352%;
   left: 48%;
-  /* top: 2330px;
-  left: 560px; */
   z-index: 0;
 }
 
@@ -126,8 +121,6 @@
   position: absolute;
   top: 372%;
   left: 59%;
-  /* top: 2480px;
-  left: 665px; */
 }
 
 .box2sticker2 {
@@ -136,8 +129,6 @@
   position: absolute;
   top: 380%;
   left: 53%;
-  /* top: 2540px;
-  left: 590px; */
 }
 
 @media (min-width: 2200px) {

@@ -11,28 +11,6 @@ const SavePage = ({ posterImageRef, contentImageRef }) => {
   const [contentSrc, setContentSrc] = useState("");
   const containerRef = useRef(null);
 
-  const saveAsFinal = () => {
-    if (posterImageRef.current) {
-      html2canvas(posterImageRef.current)
-        .then((posterCanvas) => {
-          setPosterSrc(posterCanvas.toDataURL());
-        })
-        .catch((error) => {
-          console.error("Error generating poster canvas:", error);
-        });
-    }
-
-    if (contentImageRef.current) {
-      html2canvas(contentImageRef.current)
-        .then((contentCanvas) => {
-          setContentSrc(contentCanvas.toDataURL());
-        })
-        .catch((error) => {
-          console.error("Error generating content canvas:", error);
-        });
-    }
-  };
-
   useEffect(() => {
     const updateImages = async () => {
       if (posterImageRef.current) {
@@ -55,7 +33,30 @@ const SavePage = ({ posterImageRef, contentImageRef }) => {
     };
 
     updateImages();
-  }, [posterImageRef.current, contentImageRef.current]);
+  }, [posterImageRef, contentImageRef]);
+
+  const saveAsFinal = () => {
+    if (posterImageRef.current) {
+      html2canvas(posterImageRef.current)
+        .then((posterCanvas) => {
+          setPosterSrc(posterCanvas.toDataURL());
+        })
+        .catch((error) => {
+          console.error("Error generating poster canvas:", error);
+        });
+    }
+
+    if (contentImageRef.current) {
+      console.log("contentImageRef.current:", contentImageRef.current);
+      html2canvas(contentImageRef.current)
+        .then((contentCanvas) => {
+          setContentSrc(contentCanvas.toDataURL());
+        })
+        .catch((error) => {
+          console.error("Error generating content canvas:", error);
+        });
+    }
+  };
 
   const exportAsPng = () => {
     if (containerRef.current) {
