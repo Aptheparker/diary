@@ -33,6 +33,7 @@ const ContentPage = ({ contentImageRef }) => {
         <div
           className={classes["textbox1"]}
           contentEditable
+          suppressContentEditableWarning={true}
           onFocus={() => handleFocus("textbox1")}
           onBlur={(e) => handleBlur("textbox1", e)}
         >
@@ -44,6 +45,7 @@ const ContentPage = ({ contentImageRef }) => {
         <div
           className={classes["textbox2"]}
           contentEditable
+          suppressContentEditableWarning={true}
           onFocus={() => handleFocus("textbox2")}
           onBlur={(e) => handleBlur("textbox2", e)}
         >
@@ -51,12 +53,13 @@ const ContentPage = ({ contentImageRef }) => {
             <div>내용을 입력해주세요</div>
           )}
         </div>
-          <div className={classes["textbox2"]} contentEditable />
+          <div className={classes["textbox2"]} contentEditable suppressContentEditableWarning={true}/>
         </div>
         <div className={classes["row2"]}>
         <div
           className={classes["textbox3"]}
           contentEditable
+          suppressContentEditableWarning={true}
           onFocus={() => handleFocus("textbox3")}
           onBlur={(e) => handleBlur("textbox3", e)}
         >
@@ -64,7 +67,7 @@ const ContentPage = ({ contentImageRef }) => {
             <div>내용을 입력해주세요</div>
           )}
         </div>
-          <div className={classes["textbox3"]} contentEditable />
+          <div className={classes["textbox3"]} contentEditable suppressContentEditableWarning={true}/>
         </div>
       </div>
     </div>
