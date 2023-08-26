@@ -6,7 +6,7 @@
 .content-background {
   background-image: url("./content-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   width: 100vw;
   height: 100vh;

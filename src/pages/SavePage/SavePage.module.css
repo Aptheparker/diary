@@ -1,7 +1,7 @@
 .save-background {
   background-image: url("./save-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   width: 100vw;
   height: 100vh;
